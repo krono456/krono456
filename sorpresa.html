@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Mi Tomatito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --card: #ffffffcc;
+      --accent: #ff7eb9;
+      --shadow: 0 0 20px rgba(255, 126, 185, 0.3);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: radial-gradient(circle at top, #1a1a40, #0d0d26 70%);
+      color: white;
+    }
+
+    /* Estrellas */
+    .stars {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%,100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    /* Partículas flotando */
+    .background span {
+      position: absolute;
+      display: block;
+      animation: float 12s linear infinite;
+      opacity: 0.9;
+    }
+    .background span::before {
+      content: attr(data-symbol);
+      font-size: 22px;
+      color: #ff80abcc;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-900px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Carta */
+    .card {
+      position: relative;
+      background: var(--card);
+      backdrop-filter: blur(6px);
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 680px;
+      width: 90%;
+      box-shadow: var(--shadow);
+      border: 3px solid #ff9ecd;
+      animation: glow 3s ease-in-out infinite alternate;
+      z-index: 2;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 15px #ffb6c1; }
+      to { box-shadow: 0 0 30px #ff80ab; }
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 48px;
+      color: var(--accent);
+      margin: 0 0 30px;
+      text-align: center;
+    }
+
+    p {
+      color: #222;
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    /* Firma destacada */
+    .firma {
+      margin-top: 35px;
+      text-align: right;
+      font-family: 'Dancing Script', cursive;
+      font-size: 26px;
+      color: #ff3d9e;
+      text-shadow: 0 0 12px rgba(255, 128, 171, 0.8), 0 0 25px rgba(255, 128, 171, 0.6);
+      animation: shine 3s ease-in-out infinite alternate;
+    }
+    @keyframes shine {
+      from { text-shadow: 0 0 8px #ff80ab, 0 0 20px #ff80ab; }
+      to { text-shadow: 0 0 20px #ff3d9e, 0 0 40px #ff80ab; }
+    }
+
+    /* Letras decorativas */
+    .decor {
+      position: absolute;
+      font-family: 'Dancing Script', cursive;
+      font-size: 140px;
+      color: rgba(255, 126, 185, 0.15);
+      text-shadow: 0 0 25px rgba(255, 126, 185, 0.3);
+      z-index: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+    .decor.k { left: 5%; top: 50%; transform: translateY(-50%) rotate(-10deg); }
+    .decor.z { right: 5%; top: 50%; transform: translateY(-50%) rotate(10deg); }
+  </style>
+</head>
+<body>
+  <!-- Estrellas -->
+  <div class="stars" style="top:10%;left:20%;animation-delay:1s"></div>
+  <div class="stars" style="top:30%;left:70%;animation-delay:2s"></div>
+  <div class="stars" style="top:60%;left:40%;animation-delay:3s"></div>
+  <div class="stars" style="top:80%;left:10%;animation-delay:4s"></div>
+  <div class="stars" style="top:50%;left:90%;animation-delay:2.5s"></div>
+
+  <!-- Partículas -->
+  <div class="background">
+    <span data-symbol="❤️" style="left: 10%; animation-delay: 0s; animation-duration: 14s;"></span>
+    <span data-symbol="💖" style="left: 30%; animation-delay: 2s; animation-duration: 13s;"></span>
+    <span data-symbol="🌙" style="left: 50%; animation-delay: 4s; animation-duration: 12s;"></span>
+    <span data-symbol="💞" style="left: 70%; animation-delay: 1s; animation-duration: 15s;"></span>
+    <span data-symbol="💗" style="left: 85%; animation-delay: 3s; animation-duration: 10s;"></span>
+    <span data-symbol="🌙" style="left: 20%; animation-delay: 5s; animation-duration: 16s;"></span>
+  </div>
+
+  <!-- Letras decorativas -->
+  <div class="decor k">K</div>
+  <div class="decor z">Z</div>
+
+  <!-- Carta -->
+  <div class="card">
+    <h1>Para Mi Tomatito</h1>
+
+    <p>Desde las desveladas que tuvimos los dos solos viendo películas o escuchando música mientras hablábamos, literalmente sentía una conexión única. No sé si fue porque teníamos tanto en común o porque mis locuras iban con las tuyas xd, pero bueno, desde que fuimos al Jump de Corazones te agarré más cariño y confianza.</p>
+
+    <p>Y ya después de tener varios buenos momentos juntos, te pedí ser mi novia de una forma muy cursi, ash, pero bueno. Te quiero mucho, mi Tomatito. Tengamos más buenos momentos juntos, que sin duda alguna son inolvidables si estoy contigo.</p>
+
+    <p>Como dijo Paulo Londra una vez: “Como Adán y Eva, tengamos nuestros pecados, como dos ladrones un secreto bien guardado, un camino y un destino asegurado.”</p>
+
+    <div class="firma">Con cariño,<br>tu Kronito 💖</div>
+  </div>
+</body>
+</html>
+
